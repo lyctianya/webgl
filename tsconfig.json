@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // 工作根目录
+
+    "paths": {// 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
+      "@/*": ["src/*"]
+    },
+
+    "module": "commonjs",
+    "declaration": true, // 是否自动创建类型声明文件
+    "target": "es5",// 编译的目标是什么版本的
+    "sourceMap": true, // 是否生成map文件
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false, // 是否默认禁用 any
+    "declarationDir": "./lib", // 类型声明文件的输出目录
+    "allowJs": true, // 允许编译javascript文件。
+    "lib": [ // 编译过程中需要引入的库文件的列表
+      "es5",
+      "es2015",
+      "es2016",
+      "es2017",
+      "es2018",
+      "dom"
+    ]
+  },
+
+  "include": ["src/ts/*", "src/*"],
+
+  "exclude": ["node_modules", "dist"]
+}
